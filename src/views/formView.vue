@@ -38,7 +38,8 @@ export default {
           </div>
         </div>
         <div class="grid-tbody">
-          <div v-for="formView in checkedData" :key="formView.id" class="grid-tr grid-cols-4 grid border-b min-h-[80px] gap-x-3">
+          <div v-for="formView in checkedData" :key="formView.id"
+            class="grid-tr grid-cols-4 grid border-b min-h-[80px] gap-x-3">
             <div class="flex justify-center">
               <img :src="formView.pic" alt="" class="h-[100px] w-[100px]" />
             </div>
@@ -70,11 +71,13 @@ export default {
         <label for="payment-method">付款方式</label>
         <div class="flex gap-5">
           <div class="flex items-center">
-            <input v-model="guestData.payment" type="radio" id="paymentMethod1" name="paymentMethod" required value="信用卡" />
+            <input v-model="guestData.paymentMethod" type="radio" id="paymentMethod1" name="paymentMethod" required
+              value="信用卡" />
             <label for="paymentMethod1">信用卡</label>
           </div>
           <div class="flex items-center">
-            <input v-model="guestData.pickup" type="radio" id="paymentMethod2" name="paymentMethod" required value="貨到付款" />
+            <input v-model="guestData.paymentMethod" type="radio" id="paymentMethod2" name="paymentMethod" required
+              value="貨到付款" />
             <label for="paymentMethod2">貨到付款</label>
           </div>
         </div>
@@ -83,11 +86,13 @@ export default {
         <label for="name">運送方式</label>
         <div class="flex gap-5">
           <div class="flex items-center">
-            <input v-model="guestData.payment" type="radio" id="Pick-up1" name="Pick-up" required value="宅配" />
+            <input v-model="guestData.deliveryMethod" type="radio" id="Pick-up1" name="deliveryMethod" required
+              value="宅配" />
             <label for="Pick-up1">宅配</label>
           </div>
           <div class="flex items-center">
-            <input v-model="guestData.payment" type="radio" id="Pick-up2" name="Pick-up" required value="超商取貨" />
+            <input v-model="guestData.deliveryMethod" type="radio" id="Pick-up2" name="deliveryMethod" required
+              value="超商取貨" />
             <label for="Pick-up2">超商取貨</label>
           </div>
         </div>
@@ -101,10 +106,14 @@ export default {
     </div>
     <div class="flex justify-between gap-4 ml-3 mr-3">
       <div class="flex justify-center items-center bg-slate-500 text-white rounded-md px-4 py-1 cursor-pointer md:p-0">
-        <span><RouterLink to="/">回上頁繼續購買</RouterLink></span>
+        <span>
+          <RouterLink to="/">回上頁繼續購買</RouterLink>
+        </span>
       </div>
       <div class="flex justify-center items-center bg-slate-500 text-white rounded-md px-4 py-1 cursor-pointer md:p-0">
-        <span @click="checkFormInput()"><RouterLink to="/finishView">確認購買</RouterLink></span>
+        <span @click="checkFormInput()">
+          <RouterLink to="/finishView">確認購買</RouterLink>
+        </span>
       </div>
     </div>
   </div>
