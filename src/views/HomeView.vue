@@ -11,7 +11,7 @@ export default {
     return {
       currentView: "table",
       card: {},
-      productdataArr: [
+      productdataArr:
         [{ "id": 1, "name": "Bytecard", "pic": " https://fakeimg.pl/300/", "description": "Immunization not carried out because of caregiver refusal", "price": 954, "quantity": 1 },
         { "id": 2, "name": "Alphazap", "pic": " https://fakeimg.pl/300/", "description": "Unspecified symptoms and signs involving cognitive functions following other cerebrovascular disease", "price": 776, "quantity": 1 },
         { "id": 3, "name": "Ronstring", "pic": " https://fakeimg.pl/300/", "description": "Unspecified fracture of shaft of unspecified tibia, initial encounter for open fracture type I or II", "price": 670, "quantity": 1 },
@@ -31,8 +31,7 @@ export default {
         { "id": 17, "name": "Lotstring", "pic": " https://fakeimg.pl/300/", "description": "Lead-induced gout, unspecified site", "price": 3115, "quantity": 1 },
         { "id": 18, "name": "Tres-Zap", "pic": " https://fakeimg.pl/300/", "description": "Complete traumatic transphalangeal amputation of other and unspecified finger(s)", "price": 2734, "quantity": 1 },
         { "id": 19, "name": "Zaam-Dox", "pic": " https://fakeimg.pl/300/", "description": "Nondisplaced segmental fracture of shaft of right femur", "price": 415, "quantity": 1 },
-        { "id": 20, "name": "Voyatouch", "pic": " https://fakeimg.pl/300/", "description": "Other fracture of shaft of left ulna, subsequent encounter for closed fracture with routine healing", "price": 398, "quantity": 1 }]
-      ],
+        { "id": 20, "name": "Voyatouch", "pic": " https://fakeimg.pl/300/", "description": "Other fracture of shaft of left ulna, subsequent encounter for closed fracture with routine healing", "price": 398, "quantity": 1 }],
     };
   },
 
@@ -40,15 +39,15 @@ export default {
     ...mapState(usershopCart, ["cartData"]),
   },
 
-  async mounted() {
-    try {
-      const product = await fetch("./MOCK_DATA.json");
-      const data = await product.json();
-      this.productdataArr = data;
-    } catch (error) {
-      console.error(error);
-    }
-  },
+  // async mounted() {
+  //   try {
+  //     const product = await fetch("./MOCK_DATA.json");
+  //     const data = await product.json();
+  //     this.productdataArr = data;
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // },
 
   methods: {
     toggleView(view) {
