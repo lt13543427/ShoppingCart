@@ -21,7 +21,7 @@ export default {
 
   async mounted() {
     try {
-      const product = await fetch("../MOCK_DATA.json");
+      const product = await fetch("./MOCK_DATA.json");
       const data = await product.json();
       this.productdataArr = data;
     } catch (error) {
