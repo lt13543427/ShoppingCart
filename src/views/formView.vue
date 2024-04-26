@@ -71,13 +71,13 @@ export default {
         <label for="payment-method">付款方式</label>
         <div class="flex gap-5">
           <div class="flex items-center">
-            <input v-model="guestData.paymentMethod" type="radio" id="paymentMethod1" name="paymentMethod" required
-              value="信用卡" />
+            <input v-model="guestData.payment" type="radio" id="paymentMethod1" name="paymentMethod" value="信用卡"
+              required />
             <label for="paymentMethod1">信用卡</label>
           </div>
           <div class="flex items-center">
-            <input v-model="guestData.paymentMethod" type="radio" id="paymentMethod2" name="paymentMethod" required
-              value="貨到付款" />
+            <input v-model="guestData.payment" type="radio" id="paymentMethod2" name="paymentMethod" value="貨到付款"
+              required />
             <label for="paymentMethod2">貨到付款</label>
           </div>
         </div>
@@ -86,13 +86,11 @@ export default {
         <label for="name">運送方式</label>
         <div class="flex gap-5">
           <div class="flex items-center">
-            <input v-model="guestData.deliveryMethod" type="radio" id="Pick-up1" name="deliveryMethod" required
-              value="宅配" />
+            <input v-model="guestData.pickup" type="radio" id="Pick-up1" name="deliveryMethod" value="宅配" required />
             <label for="Pick-up1">宅配</label>
           </div>
           <div class="flex items-center">
-            <input v-model="guestData.deliveryMethod" type="radio" id="Pick-up2" name="deliveryMethod" required
-              value="超商取貨" />
+            <input v-model="guestData.pickup" type="radio" id="Pick-up2" name="deliveryMethod" value="超商取貨" required />
             <label for="Pick-up2">超商取貨</label>
           </div>
         </div>
